@@ -51,3 +51,15 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')  每次打包清理
 plugins:[
      new CleanWebpackPlugin()
 ]
+
+webpack-dev-server  生成一个web服务器
+ devServer: {
+        contentBase: "./demo",//本地服务器所加载的页面所在的目录
+        historyApiFallback: true,//不跳转
+        inline: true//实时刷新
+    },
+
+package.json:
+"scripts":{
+     "serve": "webpack-dev-server --open"
+}
